@@ -403,7 +403,7 @@ nav ul li a:hover, nav ul li a:focus {
   
 .modal-certificate .modal-content {
     background: #fff;
-    padding: 24px 24px 16px 24px;
+   
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(34,34,34,0.18);
     position: relative;
@@ -443,6 +443,7 @@ nav ul li a:hover, nav ul li a:focus {
     font-weight: bold;
     transition: color 0.18s;
     z-index: 10;
+    display: none;
 }
 .close-modal:hover {
     color: #232323;
@@ -530,4 +531,246 @@ footer {
     font-size: 1rem;
     margin-top: 32px;
     letter-spacing: 1px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    scroll-margin-top: 96px;
+}
+
+nav {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.hero-text > div {
+    display: flex !important;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-list {
+    justify-content: center;
+    align-items: stretch;
+}
+
+.project-item {
+    flex: 1 1 280px;
+    max-width: 320px;
+    width: auto;
+}
+
+.modal-certificate {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 35, 35, 0.65);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+}
+
+.modal-certificate .modal-content {
+    max-width: min(92vw, 1100px);
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.close-modal {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 18px 4%;
+    }
+
+    nav .logo {
+        font-size: 1.7rem;
+    }
+
+    nav ul {
+        gap: 16px 20px;
+    }
+
+    .hero,
+    .about,
+    .skills,
+    .projects,
+    .activities,
+    .contact {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 64px;
+        padding-bottom: 56px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-img img,
+    .about-content img {
+        width: 240px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .about-content,
+    .skills-list,
+    .activities-list,
+    .project-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .project-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-social {
+        flex-wrap: wrap;
+    }
+
+    .modal-certificate img {
+        max-width: 95vw;
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .hero {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        gap: 28px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+
+    .hero-text > div {
+        width: 100%;
+    }
+
+    .hero-text .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about h2,
+    .skills h2,
+    .projects h2,
+    .activities h2,
+    .contact h2 {
+        font-size: 1.7rem;
+    }
+
+    .skills-list ul.tools-list {
+        gap: 12px 18px;
+    }
+
+    .project-item {
+        padding: 20px 16px 16px;
+    }
+
+    .contact-info {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero,
+    .about,
+    .skills,
+    .projects,
+    .activities,
+    .contact {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-img img,
+    .about-content img {
+        width: min(72vw, 260px);
+    }
+
+    .activity-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .activity-item button {
+        margin-left: 0;
+    }
+
+    .contact-social {
+        gap: 10px;
+    }
+
+    .contact-social a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-item p {
+        min-height: auto;
+    }
+
+    .nav-toggle {
+        right: 12px;
+        top: 12px;
+    }
+
+    nav ul {
+        gap: 10px 14px;
+    }
 }
